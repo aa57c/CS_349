@@ -1,0 +1,66 @@
+package lab6;
+
+import java.util.Scanner;
+
+public class Lab {
+	static Scanner sc = new Scanner(System.in);
+	public static double getLength() {
+		double length = 0;
+		System.out.println("Enter length: ");
+		length = sc.nextDouble();
+		return length;
+	}
+	public static double getWidth() {
+		double width;
+		System.out.println("Enter width: ");
+		width = sc.nextDouble();
+		return width;
+	}
+	
+	public static double getArea(double length, double width) {
+		return length * width;
+	}
+	public static void displayData() {
+		System.out.println("Area is: "+ getArea(getLength(), getWidth()));
+	}
+	public static void Celsius(double F) {
+		if(F > 20) {
+			return;
+		}
+		double celsius = 0;
+		celsius = (F - 32) * 5 / 9;
+		System.out.println("Farenheit: "+F+"\t\tCelcius: "+celsius);
+		Celsius(F + 1);
+	}
+	public static double getSquare(double d) {
+		return d * d;
+	}
+	public static int getSquare(int n) {
+		return n * n;
+		
+	}
+	public static int getCube(int n) {
+		return getSquare(n) * n;
+	}
+	public static double getCube(double d) {
+		return getSquare(d) * d;
+	}
+	public static void displaySqCube() {
+		double d = 0;
+		int n = 0;
+		System.out.println("Enter a double");
+		d = sc.nextDouble();
+		System.out.println("Enter an integer");
+		n = sc.nextInt();
+		System.out.println("Square of "+d+": "+getSquare(d)+", Cube of "+n+": "+getCube(d));
+		System.out.println("Square of "+n+": "+getSquare(n)+", Cube of "+n+": "+getCube(n));
+	}
+	public static void main(String args[]) {
+		displayData();
+		Celsius(0);
+		displaySqCube();
+
+	}
+
+
+}

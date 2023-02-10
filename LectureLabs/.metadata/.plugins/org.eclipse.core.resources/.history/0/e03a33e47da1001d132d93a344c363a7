@@ -1,0 +1,44 @@
+package lab5;
+
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Exercise {
+	public static void main(String args[]) {
+		/*
+		Scanner sc = new Scanner(System.in);
+		System.out.print("What is your name?");
+		String name = sc.nextLine();
+		for(int i = 1; i <= 5; i++) {
+			System.out.println("Hello "+name);
+		}
+		sc.close();
+		System.out.println("Miles     Kilometers");
+		for(int i = 1; i <= 10; i++) {
+			System.out.println(i+"     "+(i * 1.609));
+		}
+		System.out.println("Number     Square");
+		for(int i = 10; i >= 1; i--) {
+			System.out.println(i+"     "+Math.pow(i, 2));
+		}
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter a name: ");
+		String name = sc.nextLine();
+		for(int i = 0; i < name.length(); i++) {
+			System.out.println(name.charAt(i));
+		}
+		sc.close();
+		*/
+		Scanner sc = new Scanner(System.in);
+		int sum = 0;
+		int user_input = 0;
+		while(user_input != -1) {
+			System.out.println("Enter a number:");
+			user_input = sc.nextInt();
+			sum += user_input;
+		}
+		System.out.println("Sum of all positive integers is: "+sum);
+		
+	}
+
+}

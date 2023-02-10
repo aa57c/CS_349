@@ -1,0 +1,32 @@
+package lab6;
+
+import java.util.Scanner;
+
+public class Lab {
+	static Scanner sc = new Scanner(System.in);
+	public static double getLength() {
+		double length = 0;
+		System.out.println("Enter length: ");
+		length = sc.nextDouble();
+		return length;
+	}
+	public static double getWidth() {
+		double width;
+		System.out.println("Enter width: ");
+		width = sc.nextDouble();
+		return width;
+	}
+	
+	public static double getArea(double length, double width) {
+		return length * width;
+	}
+	public static void displayData() {
+		System.out.println("Area is: "+ getArea(getLength(), getWidth()));
+	}
+	
+	public static void main(String args[]) {
+		displayData();
+	}
+
+
+}
